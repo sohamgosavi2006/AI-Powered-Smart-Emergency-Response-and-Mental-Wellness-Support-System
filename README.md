@@ -35,6 +35,9 @@ GEMINI_API_KEY=your_api_key_here
 
 Project Overview ->
 
+<img width="740" height="820" alt="architecture" src="https://github.com/user-attachments/assets/63c260ba-b2ec-47ce-b829-79a5aaedaa57" />
+
+
 AI-Powered Smart Emergency Response and Mental Wellness Support System is a full-stack artificial intelligence application designed to address two critical real-world challenges: delayed emergency response and lack of accessible mental health support. The system integrates classical AI techniques with modern AI technologies to provide intelligent, real-time assistance to users.
 
 The application consists of two core modules: an Emergency Response System and a Mental Health Support System. The emergency module focuses on optimizing response time during critical situations by computing the shortest path to nearby emergency services such as hospitals, police stations, or fire stations. It models real-world locations as a graph-based state space, where nodes represent locations and edges represent connections between them. The system uses the A* (A-star) search algorithm, a heuristic-based pathfinding technique, to efficiently determine the optimal route based on path cost (distance or time). This ensures faster and more reliable emergency navigation.
