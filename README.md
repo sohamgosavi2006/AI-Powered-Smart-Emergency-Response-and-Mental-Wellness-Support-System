@@ -1,0 +1,2 @@
+# AI-Powered-Smart-Emergency-Response-and-Mental-Wellness-Support-System
+combines classical AI and modern LLMs. The system uses the A* search algorithm for optimal emergency routing over a graph-based state space and integrates Google Gemini API for context-aware mental health support. Built with Next.js, Prisma, and SQLite, it demonstrates intelligent agents, search algorithms, and NLP in a real-world application.
