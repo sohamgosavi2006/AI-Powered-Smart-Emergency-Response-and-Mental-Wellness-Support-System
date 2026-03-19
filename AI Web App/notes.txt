@@ -1,0 +1,92 @@
+Title -> AI-Powered Smart Emergency Response and Mental Wellness Support System
+
+Run using -> npm run dev
+It executes custom script mentioned in package.json named as 'dev'
+and is generally used to start application in test/debug mode
+
+The system solves two critical problems -
+a.) Emergency Response Delay 
+    Uses Search Algorithm [A * Search ] to solve it
+b.) Mental Health Support Accessibility
+    Uses Google Gemini LLM (Large Language Model)
+
+State Space -
+    Set of all possible states (situations) that a system can be in, from the initial state to the goal state.
+
+    Components of State Space:
+
+    a.) Initial State → Starting point
+    b.) States → All possible conditions
+    c.) Operators (Actions) → Moves between states
+    d.) Goal State → Desired solution
+    e.) Path Cost → Cost to reach goal
+
+1.) A * Search Algorithm ->
+    It is used in Emergency Response System
+
+    A.]It is faster than BFS AND DFS as it uses heuristic function 
+        f(n) = g(n) + h(n)
+        a.) g(n): actual distance from start to current 'n' node
+        b.) h(n): estimated distance from current 'n' node to goal node
+        c.) f(n): Total distance from Starting Node to Goal Node
+
+    B.] State Space -
+
+        States -> Location which includes Hospital, Places A, Places B
+
+        Initial State: User's Current location
+        Goal State: Nearest Emergency Service (Hospital,Police Station)
+                    using least Path Cost
+        Operators: To move from one location to another
+        
+
+2.) Gemini LLM (Large Language Model) ->
+    It is used in Mental Health Support System
+
+    The API key we generated belongs to a project that only supports the newest models (like gemini-2.5-flash)
+
+    A.] Introducion -
+    LLM - They are capable of understanding, summarize, generate, and predict new content, primarily text and code
+        So Gemini will process human language and understand meaning and not just keywords
+
+    B.] State Space -
+    
+    States -> These are emotional conditions including Normal, Stressed, Anxious
+
+    Initial State: User's Input (eg.- I am stressed)
+    Goal State: Improved Emotional State (eg.- I am feeling better) [AI Agent will Calm and Support user]
+
+    Operators: AI responses and suggestions to make user feel better
+
+3.) Technical Details ->
+
+    A.]Frontend -
+        We are using Next JS which is built on react framework (uses components) to build modern web applications
+        which helps to display emergency map and chatbot UI and handles user input
+
+    B.] Backend (Server) -
+        It processes logic and handles request using next.js routes
+
+    C.] Database 
+    
+    Prisma -
+        It is an ORM(Object Relational Mapping) Tool which acts as a bridge between 
+        our application and database (SQLite)
+
+    Note -> ORM (Object Relational Mapping) is a technique that allows us to interact with a 
+            database using programming language objects instead of writing SQL queries.
+
+            ORM converts database tables ↔ code objects
+
+    SQLite -
+        The entire database is stored in one file '.db' (dev.db file) [File Based Storage]
+
+        NO server or installation required as SQLite runs inside our application and 
+        is easily integrated with ORM 
+
+
+
+
+    
+        
+    

@@ -1,0 +1,59 @@
+
+> ai-project@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.20.10.3:3000
+- Environments: .env.local, .env
+✓ Ready in 620ms
+
+prisma:query INSERT INTO `main`.`ChatSession` (`id`, `createdAt`) VALUES (?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `sentimentScore`, `emotionLabel`, `isCrisis`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+Gemini API Error: Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (.next/dev/server/chunks/[root-of-the-server]__0assv4w._.js:16643:11)
+    at async makeRequest (.next/dev/server/chunks/[root-of-the-server]__0assv4w._.js:16615:9)
+    at async generateContent (.next/dev/server/chunks/[root-of-the-server]__0assv4w._.js:17057:22)
+    at async ChatSession.sendMessage (.next/dev/server/chunks/[root-of-the-server]__0assv4w._.js:17427:9)
+    at async generateChatResponse (src/lib/gemini.ts:20:20)
+    at async POST (src/app/api/chat/route.ts:67:19)
+  18 |         history: history,
+  19 |     });
+> 20 |     const result = await chat.sendMessage(message);
+     |                    ^
+  21 |     const text = await result.response.text();
+  22 |     return text || "I couldn't process that, please try again.";
+  23 |   } catch (error) { {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+ POST /api/chat 200 in 1370ms (next.js: 262ms, application-code: 1108ms)
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `isCrisis`) VALUES (?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+prisma:query SELECT 1
+prisma:query INSERT INTO `main`.`ChatSession` (`id`, `createdAt`) VALUES (?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `sentimentScore`, `emotionLabel`, `isCrisis`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `isCrisis`) VALUES (?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+ POST /api/chat 200 in 2.2s (next.js: 44ms, application-code: 2.2s)
+ GET / 200 in 513ms (next.js: 162ms, application-code: 351ms)
+ GET /emergency 200 in 100ms (next.js: 52ms, application-code: 48ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file:///Users/soham/Library/Mobile Documents/com~apple~CloudDocs/MacBook/Visual Studio Code/Web Development/Academics/Semester 4/AI/AI Web App/ai-project/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+ GET /chatbot 200 in 86ms (next.js: 50ms, application-code: 36ms)
+prisma:query SELECT 1
+prisma:query INSERT INTO `main`.`ChatSession` (`id`, `createdAt`) VALUES (?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `sentimentScore`, `emotionLabel`, `isCrisis`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `isCrisis`) VALUES (?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+ POST /api/chat 200 in 3.2s (next.js: 7ms, application-code: 3.2s)
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `sentimentScore`, `emotionLabel`, `isCrisis`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `isCrisis`) VALUES (?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+ POST /api/chat 200 in 2.4s (next.js: 8ms, application-code: 2.4s)
+prisma:query SELECT 1
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `sentimentScore`, `emotionLabel`, `isCrisis`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `isCrisis`) VALUES (?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+ POST /api/chat 200 in 3.4s (next.js: 6ms, application-code: 3.4s)
+prisma:query SELECT 1
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `sentimentScore`, `emotionLabel`, `isCrisis`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+prisma:query INSERT INTO `main`.`ChatMessage` (`id`, `createdAt`, `sessionId`, `role`, `content`, `isCrisis`) VALUES (?,?,?,?,?,?) RETURNING `id` AS `id`, `createdAt` AS `createdAt`, `sessionId` AS `sessionId`, `role` AS `role`, `content` AS `content`, `sentimentScore` AS `sentimentScore`, `emotionLabel` AS `emotionLabel`, `isCrisis` AS `isCrisis`
+ POST /api/chat 200 in 2.1s (next.js: 4ms, application-code: 2.1s)
+ GET /emergency 200 in 55ms (next.js: 7ms, application-code: 48ms)
+ GET /emergencychatgpt 404 in 2.7s (next.js: 2.6s, application-code: 98ms)
